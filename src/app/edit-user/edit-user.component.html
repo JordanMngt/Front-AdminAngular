@@ -5,9 +5,9 @@
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" type="email" placeholder="Ex. john.doe@stagiairemns.fr">
       @if(formulaire.get('email')?.hasError('required')){
-        <mat-error>Le champ est obligatoire</mat-error>
+      <mat-error>Le champ est obligatoire</mat-error>
       }@else if(formulaire.get('email')?.hasError('email')){
-        <mat-error>Le format de l'email est incorrect</mat-error>
+      <mat-error>Le format de l'email est incorrect</mat-error>
       }
     </mat-form-field>
     <mat-form-field>
@@ -22,18 +22,18 @@
 
     </mat-form-field>
     <mat-form-field>
-    <mat-label>Mot de passe</mat-label>
+      <mat-label>Mot de passe</mat-label>
       <input matInput formControlName="password" type="password">
       <mat-error>Le champ est obligatoire</mat-error>
     </mat-form-field>
-  <mat-form-field>
-    <mat-label>Roles :d</mat-label>
+    <mat-form-field>
+      <mat-label>Roles</mat-label>
       <mat-select formControlName="role">
         @for (role of listeRoles; track role) {
         <mat-option [value]="role">{{role}}</mat-option>
         }
-    </mat-select>
-  </mat-form-field>
+      </mat-select>
+    </mat-form-field>
 
     <button mat-raised-button color="primary">Ajouter l'utilisateur</button>
   </form>

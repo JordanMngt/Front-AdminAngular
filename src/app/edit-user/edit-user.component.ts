@@ -18,7 +18,7 @@ import { Utilisateur } from '../models/Utilisateur.type';
 })
 export class EditUserComponent {
 
-  listeRoles : string[] = ['Etudiant', 'Gestionnaire', 'Administrateur'];
+  listeRoles : string[] = ['Eleve', 'Admin'];
 
   formBuilder : FormBuilder = inject(FormBuilder);
 
@@ -27,7 +27,7 @@ export class EditUserComponent {
     password: ["", [Validators.required]],
     firstname: ["", [Validators.required]],
     lastname: ["", [Validators.required]],
-    role: ["Etudiant", [Validators.required]],
+    role: ["Eleve", [Validators.required]],
   })
 
   http: HttpClient = inject(HttpClient);
@@ -46,7 +46,7 @@ export class EditUserComponent {
             password: ["", []],
             firstname: ["", [Validators.required]],
             lastname: ["", [Validators.required]],
-            role: ["Etudiant", [Validators.required]],
+            role: ["Eleve", [Validators.required]],
           });
 
             this.http.get<Utilisateur>('http://localhost/back-adminng/get-user.php?id=' + parametresUrl['id'])
@@ -63,7 +63,7 @@ export class EditUserComponent {
                 password: ["", []],
                 firstname: ["", [Validators.required]],
                 lastname: ["", [Validators.required]],
-                role: ["Etudiant", [Validators.required]],
+                role: ["Eleve", [Validators.required]],
               });
             }
           }

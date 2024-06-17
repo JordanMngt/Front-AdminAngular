@@ -36,11 +36,11 @@
       <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let utilisateur">
         @if (authentification.role == "Admin") {
-        <button mat-mini-fab color="accent" [routerLink]="['/edit-user', utilisateur.id_user]">
+        <button mat-mini-fab color="accent" [routerLink]="['/edit-user', utilisateur.id]">
           <mat-icon>edit</mat-icon>
         </button>
 
-        <button mat-mini-fab color="warn" (click)="onSuppressionUtilisateur(utilisateur.id_user)">
+        <button mat-mini-fab color="warn" (click)="(utilisateur.id)">
           <mat-icon>delete</mat-icon>
         </button>
         }

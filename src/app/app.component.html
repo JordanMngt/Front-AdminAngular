@@ -15,6 +15,11 @@
           <a routerLink="/manage-user" routerLinkActive="active" class="nav-link" href="#">Manage User</a>
         </li>
         }
+        @if(authentification.role == 'Admin'){
+        <li class="nav-item">
+          <a routerLink="/add-absence" routerLinkActive="active" class="nav-link" href="#">Ajout Absence</a>
+        </li>
+        }
 
         @if(authentification.role == undefined){
         <li class="nav-item">
