@@ -6,17 +6,17 @@ import { Utilisateur } from '../models/Utilisateur.type';
 import {MatPaginatorModule} from '@angular/material/paginator'; 
 import {MatTableModule} from '@angular/material/table'; 
 import { MatIconModule } from '@angular/material/icon';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthentificationService } from '../authentification.service';
 
+
 @Component({
-  selector: 'app-add-absence',
+  selector: 'app-retard',
   standalone: true,
   imports: [MatButtonModule, RouterLink, MatTableModule, MatPaginatorModule, MatIconModule],
-  templateUrl: './add-absence.component.html',
-  styleUrl: './add-absence.component.scss'
+  templateUrl: './retard.component.html',
+  styleUrl: './retard.component.scss'
 })
-export class AddAbsenceComponent {
+export class RetardComponent {
   http: HttpClient = inject(HttpClient);
   authentification: AuthentificationService = inject(AuthentificationService);
 
@@ -35,3 +35,4 @@ export class AddAbsenceComponent {
     
   }
 }
+
