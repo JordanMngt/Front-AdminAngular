@@ -40,7 +40,7 @@
           <mat-icon>alarm_add</mat-icon>
         </button>
 
-        <button mat-mini-fab color="warn" (click)="(utilisateur.id_user)">
+        <button mat-mini-fab color="warn" [routerLink]="['/add-abs', utilisateur.id_user]">
           <mat-icon>note_add</mat-icon>
         </button>
         }

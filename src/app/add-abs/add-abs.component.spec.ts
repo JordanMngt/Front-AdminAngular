@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRetardComponent } from './add-retard.component';
+import { AddAbsComponent } from './add-abs.component';
 
-describe('AddRetardComponent', () => {
-  let component: AddRetardComponent;
-  let fixture: ComponentFixture<AddRetardComponent>;
+describe('AddAbsComponent', () => {
+  let component: AddAbsComponent;
+  let fixture: ComponentFixture<AddAbsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddRetardComponent]
+      imports: [AddAbsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddRetardComponent);
+    fixture = TestBed.createComponent(AddAbsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

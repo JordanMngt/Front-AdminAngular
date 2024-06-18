@@ -1,0 +1,10 @@
+<form class="formulaire" (ngSubmit)="addAbs()" [formGroup]="formulaire">
+  <mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="absence_date">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Envoyer l'absence</button>
+</form>
