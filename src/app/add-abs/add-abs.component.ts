@@ -18,10 +18,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AddAbsComponent {
   formBuilder : FormBuilder = inject(FormBuilder);
-  formulaire: FormGroup = this.formBuilder.group({
-    date: ["", [Validators.required]],
-  })
-
+  formulaire: FormGroup = inject(FormGroup);
   http: HttpClient = inject(HttpClient);
 
   addAbs() {
